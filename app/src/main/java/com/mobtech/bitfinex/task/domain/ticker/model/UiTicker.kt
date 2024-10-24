@@ -15,9 +15,9 @@ data class UiTicker(
 
     val formattedPrice: String
         get() = if (lastPrice < 100) {
-            DecimalFormat("€#,##0.00##").format(lastPrice)
+            DecimalFormat("$ #,##0.00##").format(lastPrice)
         } else {
-            DecimalFormat("€#,##0.00").format(lastPrice)
+            DecimalFormat("$ #,##0.00").format(lastPrice)
         }
 
     val formattedPercentage: String
