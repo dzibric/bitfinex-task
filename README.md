@@ -29,13 +29,3 @@ A combined **Connectivity Observer** has been implemented alongside handling net
 ## Testing
 
 - **Unit Testing**: ViewModel and UseCase have been tested to ensure business logic and state management correctness.
-
-## Technologies and Libraries Used
-
-- **Kotlin** (1.9.0) - Programming language
-- **Jetpack Compose** (Compose BOM 2024.04.01) - UI toolkit
-- **Koin** (3.1.4) - Dependency Injection
-- **Ktor** (3.0.0) - Networking
-- **Coroutines** (1.6.0) - Asynchronous programming
-- **Flow** - Data stream handling
-- **NavHost** - Navigation component
