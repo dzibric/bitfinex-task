@@ -12,9 +12,14 @@ fun TickersRoute(
 ) {
     CoreComposable(viewModel) { state ->
         TickersScreen(
-            tickers = state.tickers,
+            tickers = state.filteredTickers,
             search = state.searchQuery,
-            onSearchChange = viewModel::onSearchQueryChanged
+            isLoading = state.isLoading,
+            error = state.error,
+            onSearchChange = viewModel::onSearchQueryChanged,
+            onRefresh = viewModel::refreshTickers,
+            sortOption = state.sortOption,
+            onSortOptionChange = viewModel::onSortOptionChanged,
         )
     }
 }

@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.parcelize)
-
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -56,6 +56,7 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.navigation)
+    implementation(libs.androidx.compose.material)
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
@@ -64,6 +65,7 @@ dependencies {
     implementation(libs.io.ktor)
     implementation(libs.io.ktor.cio)
     implementation(libs.io.ktor.serialization)
+    implementation(libs.io.ktor.content.negotiation)
     implementation(libs.io.insert.koin)
     implementation(libs.io.insert.koin.compose)
     implementation(libs.kotlinx.coroutines)
@@ -71,6 +73,8 @@ dependencies {
 
     testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.junit)
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.io.mockk)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))

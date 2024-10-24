@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">bitfinex-task</string>
+    <string name="app_name">Bitfinex</string>
+    <string name="network_error_occurred">Network error occurred. Check your connection and try again.</string>
+    <string name="server_error_occurred">Server error occurred. Please try again later.</string>
+    <string name="unknown_error_occurred">Unknown error occurred. Please try again later.</string>
+    <string name="no_results_try_changing_search_query">No results, try changing search query</string>
+    <string name="retry">Retry</string>
+    <string name="price_ascending">Price Ascending</string>
+    <string name="price_descending">Price Descending</string>
+    <string name="price_change_ascending">Change Ascending</string>
+    <string name="price_change_descending">Change Descending</string>
 </resources>
