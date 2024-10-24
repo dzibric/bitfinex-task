@@ -9,6 +9,7 @@ import com.mobtech.bitfinex.task.ui.screen.core.CoreEvent
 import com.mobtech.bitfinex.task.ui.screen.core.CoreState
 import com.mobtech.bitfinex.task.ui.screen.core.CoreViewModel
 import com.mobtech.bitfinex.task.util.NetworkConnectivityObserver
+import com.mobtech.bitfinex.task.util.SEARCH_TERM_MAX_LENGTH
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
@@ -61,6 +62,7 @@ class TickersViewModel(
     fun onTickerClicked(ticker: UiTicker) = emitEvent(TickersEvent.TickerClicked(ticker))
 
     fun onSearchQueryChanged(query: String) {
+        if (query.length > SEARCH_TERM_MAX_LENGTH) return
         updateState { currentState ->
             currentState.copy(
                 searchQuery = query,

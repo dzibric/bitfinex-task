@@ -78,7 +78,8 @@ fun TickersScreen(
             OutlinedTextField(
                 value = search,
                 onValueChange = onSearchChange,
-                label = { Text("Search") },
+                label = { Text(stringResource(R.string.search)) },
+                maxLines = 1,
                 leadingIcon = {
                     Icon(
                         imageVector = Icons.Default.Search,
@@ -164,7 +165,7 @@ fun SortDropdown(
             elevation = ButtonDefaults.elevation(defaultElevation = 0.dp),
             colors = ButtonDefaults.buttonColors(backgroundColor = Color.Transparent)
         ) {
-            Text(text = "Sorted by: ${stringResource(sortOption.titleRes)}")
+            Text(text = stringResource(R.string.sorted_by, stringResource(sortOption.titleRes)))
         }
 
         DropdownMenu(
